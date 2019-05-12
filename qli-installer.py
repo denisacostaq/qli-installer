@@ -19,9 +19,11 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
-
+import shutil
 import sys
 import os
+from pathlib import Path
+
 import requests
 import xml.etree.ElementTree as ElementTree
 
@@ -108,17 +110,32 @@ print("ARCH:      ", arch)
 print("Source URL:", archives_url)
 print("****************************************")
 
+
+def download_file(target_url, local_filename):
+    with requests.get(target_url, stream=True) as r:
+        with open(local_filename, 'wb') as f:
+            shutil.copyfileobj(r.raw, f)
+
+    return local_filename
+
+
+tmp_directory_path = Path('tmp')
+tmp_directory_path.mkdir(exist_ok=True)
+out_directory_path = Path('output')
+out_directory_path.mkdir(exist_ok=True)
+
+
 for archive in archives:
+
     url = archives_url + full_version + archive
+    local_archive_path = Path(tmp_directory_path, archive)
 
-    sys.stdout.write("\033[K")
-    print("Downloading {}...".format(archive), end="\r")
-    os.system("wget -q -O package.7z " + url)
+    print(f"Downloading {archive}...")
 
-    sys.stdout.write("\033[K")
-    print("Extracting {}...".format(archive), end="\r")
-    os.system("7z x package.7z 1>/dev/null")
-    os.system("rm package.7z")
+    download_file(url, local_archive_path)
 
-sys.stdout.write("\033[K")
+    print(f"Extracting {archive}...")
+    os.system(f'7z x {local_archive_path} -o{out_directory_path}')
+    os.remove(local_archive_path)
+
 print("Finished installation")
