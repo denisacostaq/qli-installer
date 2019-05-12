@@ -121,9 +121,9 @@ def download_file(target_url, local_filename):
 
 
 tmp_directory_path = Path(getenv('QLI_TMP_DIR', Path(Path(__file__).parent, 'tmp')))
-tmp_directory_path.mkdir(exist_ok=True)
+tmp_directory_path.mkdir(parents=True, exist_ok=True)
 out_directory_path = Path(getenv('QLI_OUT_DIR', Path(Path(__file__).parent, 'output')))
-out_directory_path.mkdir(exist_ok=True)
+out_directory_path.mkdir(parents=True, exist_ok=True)
 
 
 def download_extract_archive(archives_url, full_version, archive, tmp_directory_path, out_directory_path):
