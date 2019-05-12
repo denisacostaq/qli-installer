@@ -8,9 +8,14 @@ Linux binaries on Linux; you could also download iOS binaries).
 
 This is a great alternative to the 2.5GB+ offline installers which just include
 everything and are the only official way to pin QT versions with. Think of this
-as a pinned online installer alternative. 
+as a pinned online installer alternative. It's great for FOSS projects using
+cloud CI systems without access to a huge cache.
 
-This isn't official nor set in stone. If something breaks, please create an
+Naturally, this is also headless. Though if you would like to use the 
+*official* large installers headlessly, might I suggest you take a look at the 
+[CuteCI project][cuteci]?
+
+This isn't the official installer though. If something breaks, please create an
 issue. 
 
 **Dependencies**: Python 3.7, Python `requests` library
@@ -73,3 +78,5 @@ https://git.kaidan.im/lnj/qli-installer/blob/master/
 This fork of this tool is hosted on GitHub:
 
 https://github.com/nelsonjchen/qli-installer  
+
+[cuteci]: https://github.com/hasboeuf/cuteci/
