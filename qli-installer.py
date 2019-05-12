@@ -19,13 +19,14 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
+import concurrent.futures
+import os
 import shutil
 import sys
-import os
+import xml.etree.ElementTree as ElementTree
 from pathlib import Path
 
 import requests
-import xml.etree.ElementTree as ElementTree
 
 if len(sys.argv) < 4 or len(sys.argv) > 5:
     print("Usage: {} <qt-version> <host> <target> [<arch>]\n".format(sys.argv[0]))
@@ -100,7 +101,6 @@ if not full_version or not archives:
     print("Error while parsing package information!")
     exit(1)
 
-
 print("****************************************")
 print("Installing {}".format(package_desc))
 print("****************************************")
@@ -125,8 +125,7 @@ out_directory_path = Path('output')
 out_directory_path.mkdir(exist_ok=True)
 
 
-for archive in archives:
-
+def download_extract_archive(archives_url, full_version, archive, tmp_directory_path, out_directory_path):
     url = archives_url + full_version + archive
     local_archive_path = Path(tmp_directory_path, archive)
 
@@ -135,7 +134,15 @@ for archive in archives:
     download_file(url, local_archive_path)
 
     print(f"Extracting {archive}...")
-    os.system(f'7z x {local_archive_path} -o{out_directory_path}')
+    os.system(f'7z x -y {local_archive_path} -o{out_directory_path}')
     os.remove(local_archive_path)
+
+
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    [
+        executor.submit(download_extract_archive, archives_url, full_version, archive, tmp_directory_path,
+                        out_directory_path)
+        for archive in archives
+    ]
 
 print("Finished installation")
