@@ -1,5 +1,7 @@
 # Qt CLI installer
 
+[![Build Status](https://dev.azure.com/nelsonjchen/QLI-Installer/_apis/build/status/nelsonjchen.qli-installer?branchName=master)](https://dev.azure.com/nelsonjchen/QLI-Installer/_build/latest?definitionId=15&branchName=master)
+
 This is a simple script replacing the official graphical Qt installer. It can
 automatically download prebuilt Qt binaries for any target (you're not bound to
 Linux binaries on Linux; you could also download iOS binaries). 
@@ -11,7 +13,8 @@ as a pinned online installer alternative.
 This isn't official nor set in stone. If something breaks, please create an
 issue. 
 
-**Dependencies**: Python 3.7, Python `requests` library, 7z
+**Dependencies**: Python 3.7, Python `requests` library
+ (see or `pip install -r` `requirements.txt`), 7z or p7zip
 
 ## Usage
 
@@ -46,6 +49,19 @@ Example: Installing QT 5.12.3 (msvc_2017) Qt 5.10.2:
 
 All these examples will create a `tmp` folder within the root of the script and
 an `output` folder with the downloaded target.
+
+## Azure Pipelines
+
+The script is tested against all currently stable and supported versions of 
+QT versions, host platforms, targets, and architectures.
+
+The number of jobs is a bit insane but it's *all* tested to see if it can be
+installed.
+
+Because of this, **the `azure-pipelines.yml` in the root is generated!** 
+Install the packages in `.azure-pipelines/requirements.txt` and run 
+`.azure-pipelines/generate_azure_pipelines_yml.py` to regenerate 
+ `azure-pipelines.yml`. 
 
 ## Original Repository
 

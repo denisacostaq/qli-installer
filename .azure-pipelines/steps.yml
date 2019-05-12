@@ -1,0 +1,5 @@
+steps:
+  - script: pip install -r requirements.txt
+    displayName: Install Python Requirements
+  - script: python qli-installer.py $(QT_VERSION) $(HOST) $(TARGET) $(ARCH)
+    displayName: Run QLI Installer
