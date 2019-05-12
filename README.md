@@ -50,6 +50,9 @@ Example: Installing QT 5.12.3 (msvc_2017) Qt 5.10.2:
 All these examples will create a `tmp` folder within the root of the script and
 an `output` folder with the downloaded target.
 
+The `tmp` and `output` folders can be adjusted with their respective
+environment variables: `QLI_TMP_DIR` and `QLI_OUT_DIR`.
+
 ## Azure Pipelines
 
 The script is tested against all currently stable and supported versions of 
