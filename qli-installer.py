@@ -24,6 +24,7 @@ import os
 import shutil
 import sys
 import xml.etree.ElementTree as ElementTree
+from os import getenv
 from pathlib import Path
 
 import requests
@@ -119,9 +120,9 @@ def download_file(target_url, local_filename):
     return local_filename
 
 
-tmp_directory_path = Path('tmp')
+tmp_directory_path = Path(getenv('QLI_TMP_DIR', Path(Path(__file__).parent, 'tmp')))
 tmp_directory_path.mkdir(exist_ok=True)
-out_directory_path = Path('output')
+out_directory_path = Path(getenv('QLI_OUT_DIR', Path(Path(__file__).parent, 'output')))
 out_directory_path.mkdir(exist_ok=True)
 
 
