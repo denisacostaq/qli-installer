@@ -16,9 +16,9 @@ Naturally, this is also headless and lightweight. Though if you would like to us
 *official* large installers headlessly, might I suggest you take a look at the 
 [CuteCI project][cuteci]? It's way heavier than this though in file footprint
 and takes much longer to install with even on a fast machine in a datacenter.
-For example, CuteCI takes about 7 minutes on Windows to install the Windows 
-Qt5 MSVC Win64 toolkit while this script takes about 21 seconds. Still,
-it's **official**. 
+For example, the extracted CuteCI UI silent install takes about 7 minutes on 
+Windows to install the Windows Qt5 MSVC Win64 toolkit while this script
+takes about 21 seconds. Still, it is **official** which this will never be. 
 
 This isn't the official installer though so don't expect support from Qt!
 If something breaks, please create an issue at in *this* project's tracker.
