@@ -6,19 +6,24 @@ This is a simple script replacing the official graphical Qt installer. It can
 automatically download prebuilt Qt binaries for any target (you're not bound to
 Linux binaries on Linux; you could also download iOS binaries). 
 
-This is a great alternative to the 2.5GB+ offline installers which just include
-everything and are the only official way to pin QT versions with. Think of this
-as a pinned online installer alternative. It's great for FOSS projects using
-cloud CI systems without access to a huge cache.
+This is a great alternative to the 2.5GB+ offline executable installers which just include
+everything and are the only official way to pin Qt versions with. Think of this
+as a version selecting online installer alternative that Qt doesn't put out. 
+It's great for projects using cloud CI systems without access to a huge cache or
+capacity to host a pinned Qt download themselves. 
 
-Naturally, this is also headless. Though if you would like to use the 
+Naturally, this is also headless and lightweight. Though if you would like to use the 
 *official* large installers headlessly, might I suggest you take a look at the 
-[CuteCI project][cuteci]?
+[CuteCI project][cuteci]? It's way heavier than this though in file footprint
+and takes much longer to install with even on a fast machine in a datacenter.
+For example, CuteCI takes about 7 minutes on Windows to install the Windows 
+Qt5 MSVC Win64 toolkit while this script takes about 21 seconds. Still,
+it's **official**. 
 
-This isn't the official installer though. If something breaks, please create an
-issue. 
+This isn't the official installer though so don't expect support from Qt!
+If something breaks, please create an issue at in *this* project's tracker.
 
-**Dependencies**: Python 3.7, Python `requests` library
+**Dependencies**: Python 3.6/3.7, Python `requests` library
  (see or `pip install -r` `requirements.txt`), 7z or p7zip
 
 ## Usage
@@ -58,13 +63,20 @@ an `output` folder with the downloaded target.
 The `tmp` and `output` folders can be adjusted with their respective
 environment variables: `QLI_TMP_DIR` and `QLI_OUT_DIR`.
 
+## Examples
+
+*WIP*
+
+https://github.com/nelsonjchen/barrier/tree/azure-pipelines
+
 ## Azure Pipelines
 
 The script is tested against all currently stable and supported versions of 
 QT versions, host platforms, targets, and architectures.
 
-The number of jobs is a bit insane but it's *all* tested to see if it can be
-installed.
+The number of jobs is a bit insane but it's *all* tested to see if reasonable 
+targets to be downloaded and used on a platform can be installed. 
+E.g. iOS on a Mac and MSVC on Windows.
 
 Because of this, **the `azure-pipelines.yml` in the root is generated!** 
 Install the packages in `.azure-pipelines/requirements.txt` and run 
