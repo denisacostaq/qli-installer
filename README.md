@@ -2,7 +2,7 @@
 
 [![Build Status](https://dev.azure.com/nelsonjchen/QLI-Installer/_apis/build/status/nelsonjchen.qli-installer?branchName=master)](https://dev.azure.com/nelsonjchen/QLI-Installer/_build/latest?definitionId=15&branchName=master)
 
-This is a simple script replacing the official graphical Qt installer. It can
+This is a simple script replacing the official online-only graphical Qt installer. It can
 automatically download prebuilt Qt binaries for any target (you're not bound to
 Linux binaries on Linux; you could also download iOS binaries). 
 
@@ -18,7 +18,9 @@ Naturally, this is also headless and lightweight. Though if you would like to us
 and takes much longer to install with even on a fast machine in a datacenter.
 For example, the extracted CuteCI UI silent install takes about 7 minutes on 
 Windows to install the Windows Qt5 MSVC Win64 toolkit while this script
-takes about 21 seconds. Still, it is **official** which this will never be. 
+takes about 21 seconds. Still, it is **official** which this will never be. It
+also supports pure-offline installation. This script requires connectivity to Qt
+mirrors.
 
 This isn't the official installer though so don't expect support from Qt!
 If something breaks, please create an issue at in *this* project's tracker.
