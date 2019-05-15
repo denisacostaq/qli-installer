@@ -85,12 +85,22 @@ Install the packages in `.azure-pipelines/requirements.txt` and run
 `.azure-pipelines/generate_azure_pipelines_yml.py` to regenerate 
  `azure-pipelines.yml`. 
 
-## Original Repository
+## Original Repository and Other Forks
 
 https://git.kaidan.im/lnj/qli-installer/blob/master/
 
 This fork of this tool is hosted on GitHub:
 
 https://github.com/nelsonjchen/qli-installer  
+
+After making this fork , I found another fork of lnjx's qli-installer
+that also ported QLI Installer to Windows. 😒 If you're looking for a
+version that's in PyPI and is also continuously tested on the target
+platforms, look at `aqtinstall`:
+
+https://pypi.org/project/aqtinstall/
+
+It has parallel downloading and extraction support too!
+
 
 [cuteci]: https://github.com/hasboeuf/cuteci/
