@@ -28,6 +28,8 @@ from os import getenv
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3 import Retry
 
 if len(sys.argv) < 4 or len(sys.argv) > 5:
     print("Usage: {} <qt-version> <host> <target> [<arch>]\n".format(sys.argv[0]))
@@ -112,8 +114,37 @@ print("Source URL:", archives_url)
 print("****************************************")
 
 
+def requests_retry_session(
+    retries=3,
+    backoff_factor=0.3,
+    status_forcelist=(500, 502, 504),
+    session=None,
+):
+    """
+    Off the shelf retry: https://www.peterbe.com/plog/best-practice-with-retries-with-requests
+
+    :param retries:
+    :param backoff_factor:
+    :param status_forcelist:
+    :param session:
+    :return:
+    """
+    session = session or requests.Session()
+    retry = Retry(
+        total=retries,
+        read=retries,
+        connect=retries,
+        backoff_factor=backoff_factor,
+        status_forcelist=status_forcelist,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    return session
+
+
 def download_file(target_url, local_filename):
-    with requests.get(target_url, stream=True) as r:
+    with requests_retry_session().get(target_url, stream=True) as r:
         with open(local_filename, 'wb') as f:
             shutil.copyfileobj(r.raw, f)
 
