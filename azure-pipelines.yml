@@ -14,21 +14,9 @@ jobs:
   - template: .azure-pipelines/steps.yml
   strategy:
     matrix:
-      Python 3.6 QT 5.9.7 mac desktop clang_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: desktop
-        ARCH: clang_64
       Python 3.7 QT 5.9.7 mac desktop clang_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: desktop
-        ARCH: clang_64
-      Python 3.6 QT 5.11.3 mac desktop clang_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
@@ -38,21 +26,9 @@ jobs:
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
-      Python 3.6 QT 5.12.3 mac desktop clang_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: desktop
-        ARCH: clang_64
       Python 3.7 QT 5.12.3 mac desktop clang_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: desktop
-        ARCH: clang_64
-      Python 3.6 QT 5.13.0 mac desktop clang_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
@@ -62,45 +38,9 @@ jobs:
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
-      Python 3.6 QT 5.9.7 mac ios ios:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
-      Python 3.7 QT 5.9.7 mac ios ios:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
-      Python 3.6 QT 5.11.3 mac ios ios:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
-      Python 3.7 QT 5.11.3 mac ios ios:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
-      Python 3.6 QT 5.12.3 mac ios ios:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
       Python 3.7 QT 5.12.3 mac ios ios:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: ios
-        ARCH: ios
-      Python 3.6 QT 5.13.0 mac ios ios:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
         HOST: mac
         TARGET: ios
         ARCH: ios
@@ -110,96 +50,24 @@ jobs:
         HOST: mac
         TARGET: ios
         ARCH: ios
-      Python 3.6 QT 5.9.7 mac android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.9.7 mac android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.9.7 mac android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.9.7 mac android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.11.3 mac android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.11.3 mac android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.11.3 mac android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.11.3 mac android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.12.3 mac android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.12.3 mac android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.12.3 mac android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.12.3 mac android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: android
         ARCH: android_armv7
-      Python 3.6 QT 5.13.0 mac android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: mac
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.13.0 mac android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: mac
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.13.0 mac android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: mac
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.13.0 mac android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
@@ -216,324 +84,138 @@ jobs:
   - template: .azure-pipelines/steps.yml
   strategy:
     matrix:
-      Python 3.6 QT 5.9.8 windows desktop win64_msvc2017_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.8
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2017_64
       Python 3.7 QT 5.9.8 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
-      Python 3.6 QT 5.9.8 windows desktop win64_msvc2015_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.8
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2015_64
       Python 3.7 QT 5.9.8 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
-      Python 3.6 QT 5.9.8 windows desktop win64_msvc2013_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.8
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2013_64
       Python 3.7 QT 5.9.8 windows desktop win64_msvc2013_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2013_64
-      Python 3.6 QT 5.9.8 windows desktop win32_msvc2015:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.8
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_msvc2015
       Python 3.7 QT 5.9.8 windows desktop win32_msvc2015:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2015
-      Python 3.6 QT 5.9.8 windows desktop win32_mingw53:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.8
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_mingw53
       Python 3.7 QT 5.9.8 windows desktop win32_mingw53:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw53
-      Python 3.6 QT 5.11.3 windows desktop win64_msvc2017_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2017_64
       Python 3.7 QT 5.11.3 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
-      Python 3.6 QT 5.11.3 windows desktop win64_msvc2015_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2015_64
       Python 3.7 QT 5.11.3 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
-      Python 3.6 QT 5.11.3 windows desktop win32_msvc2015:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_msvc2015
       Python 3.7 QT 5.11.3 windows desktop win32_msvc2015:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2015
-      Python 3.6 QT 5.11.3 windows desktop win32_mingw53:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_mingw53
       Python 3.7 QT 5.11.3 windows desktop win32_mingw53:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw53
-      Python 3.6 QT 5.12.3 windows desktop win64_msvc2017_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2017_64
       Python 3.7 QT 5.12.3 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
-      Python 3.6 QT 5.12.3 windows desktop win64_msvc2015_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2015_64
       Python 3.7 QT 5.12.3 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
-      Python 3.6 QT 5.12.3 windows desktop win64_mingw73:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_mingw73
       Python 3.7 QT 5.12.3 windows desktop win64_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_mingw73
-      Python 3.6 QT 5.12.3 windows desktop win32_msvc2017:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_msvc2017
       Python 3.7 QT 5.12.3 windows desktop win32_msvc2017:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2017
-      Python 3.6 QT 5.12.3 windows desktop win32_mingw73:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_mingw73
       Python 3.7 QT 5.12.3 windows desktop win32_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw73
-      Python 3.6 QT 5.13.0 windows desktop win64_msvc2017_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2017_64
       Python 3.7 QT 5.13.0 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
-      Python 3.6 QT 5.13.0 windows desktop win64_msvc2015_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_msvc2015_64
       Python 3.7 QT 5.13.0 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
-      Python 3.6 QT 5.13.0 windows desktop win64_mingw73:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: desktop
-        ARCH: win64_mingw73
       Python 3.7 QT 5.13.0 windows desktop win64_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_mingw73
-      Python 3.6 QT 5.13.0 windows desktop win32_msvc2017:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_msvc2017
       Python 3.7 QT 5.13.0 windows desktop win32_msvc2017:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2017
-      Python 3.6 QT 5.13.0 windows desktop win32_mingw73:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: desktop
-        ARCH: win32_mingw73
       Python 3.7 QT 5.13.0 windows desktop win32_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw73
-      Python 3.6 QT 5.9.7 windows android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.9.7 windows android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.9.7 windows android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.9.7 windows android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.11.3 windows android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.11.3 windows android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.11.3 windows android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.11.3 windows android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.12.3 windows android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.12.3 windows android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.12.3 windows android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.12.3 windows android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: android
         ARCH: android_armv7
-      Python 3.6 QT 5.13.0 windows android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.13.0 windows android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.13.0 windows android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: windows
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.13.0 windows android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
@@ -550,21 +232,9 @@ jobs:
   - template: .azure-pipelines/steps.yml
   strategy:
     matrix:
-      Python 3.6 QT 5.9.7 linux desktop gcc_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: desktop
-        ARCH: gcc_64
       Python 3.7 QT 5.9.7 linux desktop gcc_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: desktop
-        ARCH: gcc_64
-      Python 3.6 QT 5.11.3 linux desktop gcc_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
@@ -574,21 +244,9 @@ jobs:
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
-      Python 3.6 QT 5.12.3 linux desktop gcc_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: linux
-        TARGET: desktop
-        ARCH: gcc_64
       Python 3.7 QT 5.12.3 linux desktop gcc_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
-        HOST: linux
-        TARGET: desktop
-        ARCH: gcc_64
-      Python 3.6 QT 5.13.0 linux desktop gcc_64:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
@@ -598,96 +256,24 @@ jobs:
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
-      Python 3.6 QT 5.9.7 linux android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.9.7 linux android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.9.7 linux android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.9.7 linux android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.9.7
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.11.3 linux android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
-      Python 3.7 QT 5.11.3 linux android android_x86:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
-      Python 3.6 QT 5.11.3 linux android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.11.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.7 QT 5.11.3 linux android android_armv7:
-        PYTHON_VERSION: '3.7'
-        QT_VERSION: 5.11.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
-      Python 3.6 QT 5.12.3 linux android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.12.3 linux android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: linux
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.12.3 linux android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.12.3
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.12.3 linux android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: linux
         TARGET: android
         ARCH: android_armv7
-      Python 3.6 QT 5.13.0 linux android android_x86:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: linux
-        TARGET: android
-        ARCH: android_x86
       Python 3.7 QT 5.13.0 linux android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: linux
         TARGET: android
         ARCH: android_x86
-      Python 3.6 QT 5.13.0 linux android android_armv7:
-        PYTHON_VERSION: '3.6'
-        QT_VERSION: 5.13.0
-        HOST: linux
-        TARGET: android
-        ARCH: android_armv7
       Python 3.7 QT 5.13.0 linux android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0

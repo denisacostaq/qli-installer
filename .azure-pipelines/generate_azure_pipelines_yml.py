@@ -25,7 +25,6 @@ class PlatformBuildJobs:
 
 
 python_versions = [
-    '3.6',
     '3.7',
 ]
 
@@ -33,7 +32,12 @@ qt_versions = [
     '5.9.7',
     '5.11.3',
     '5.12.3',
-    '5.13.0'
+    '5.13.0',
+]
+
+mobile_qt_versions = [
+    '5.12.3',
+    '5.13.0',
 ]
 
 linux_build_jobs = []
@@ -61,7 +65,7 @@ for qt_version in qt_versions:
     )
 
 # Mac iOS
-for qt_version in qt_versions:
+for qt_version in mobile_qt_versions:
     mac_build_jobs.append(
         BuildJob(qt_version, 'mac', 'ios', 'ios')
     )
@@ -110,7 +114,7 @@ windows_build_jobs.extend(
 
 # All Androids for all platforms
 
-for qt_version in qt_versions:
+for qt_version in mobile_qt_versions:
     for android_arch in [
         'android_x86',
         'android_armv7',
