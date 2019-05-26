@@ -115,7 +115,7 @@ print("****************************************")
 
 
 def requests_retry_session(
-    retries=3,
+    retries=10,
     backoff_factor=0.3,
     status_forcelist=(500, 502, 504),
     session=None,
