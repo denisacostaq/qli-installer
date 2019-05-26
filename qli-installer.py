@@ -170,7 +170,7 @@ def download_extract_archive(archives_url, full_version, archive, tmp_directory_
     os.remove(local_archive_path)
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
     jobs = [
         executor.submit(download_extract_archive, archives_url, full_version, archive, tmp_directory_path,
                         out_directory_path)
