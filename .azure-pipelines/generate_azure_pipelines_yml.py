@@ -139,6 +139,7 @@ for platform_build_job in all_platform_build_jobs:
                 'HOST': build_job.host,
                 'TARGET': build_job.target,
                 'ARCH': build_job.arch,
+                'QLI_BASE_URL': 'http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/',
             }
     matrices[platform_build_job.platform.capitalize()] = yaml_dictionary
 

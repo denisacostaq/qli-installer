@@ -20,60 +20,70 @@ jobs:
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 mac desktop clang_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 mac desktop clang_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 mac desktop clang_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: mac
         TARGET: desktop
         ARCH: clang_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 mac ios ios:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: ios
         ARCH: ios
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 mac ios ios:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: mac
         TARGET: ios
         ARCH: ios
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 mac android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 mac android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: mac
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 mac android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: mac
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 mac android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: mac
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
 - job: Windows
   pool:
     vmImage: vs2017-win2016
@@ -90,138 +100,161 @@ jobs:
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.9.8 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.9.8 windows desktop win64_msvc2013_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2013_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.9.8 windows desktop win32_msvc2015:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2015
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.9.8 windows desktop win32_mingw53:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.9.8
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw53
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 windows desktop win32_msvc2015:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2015
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 windows desktop win32_mingw53:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw53
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows desktop win64_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win64_mingw73
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows desktop win32_msvc2017:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2017
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows desktop win32_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw73
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows desktop win64_msvc2017_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2017_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows desktop win64_msvc2015_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_msvc2015_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows desktop win64_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win64_mingw73
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows desktop win32_msvc2017:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win32_msvc2017
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows desktop win32_mingw73:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: desktop
         ARCH: win32_mingw73
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 windows android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: windows
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 windows android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: windows
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
 - job: Linux
   pool:
     vmImage: ubuntu-16.04
@@ -238,45 +271,53 @@ jobs:
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.11.3 linux desktop gcc_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.11.3
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 linux desktop gcc_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 linux desktop gcc_64:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: linux
         TARGET: desktop
         ARCH: gcc_64
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 linux android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: linux
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.12.3 linux android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.12.3
         HOST: linux
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 linux android android_x86:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: linux
         TARGET: android
         ARCH: android_x86
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
       Python 3.7 QT 5.13.0 linux android android_armv7:
         PYTHON_VERSION: '3.7'
         QT_VERSION: 5.13.0
         HOST: linux
         TARGET: android
         ARCH: android_armv7
+        QLI_BASE_URL: http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/
