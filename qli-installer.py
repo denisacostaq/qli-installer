@@ -38,7 +38,7 @@ if len(sys.argv) < 4 or len(sys.argv) > 5:
     print("targets:      desktop, android, ios")
     exit(1)
 
-base_url = "http://mirrors.ocf.berkeley.edu/qt/online/qtsdkrepository/"
+base_url = Path(getenv('QLI_BASE_URL', "https://download.qt.io/online/qtsdkrepository/"))
 
 # Qt version
 qt_version = sys.argv[1]
