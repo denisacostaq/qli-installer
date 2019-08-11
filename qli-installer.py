@@ -29,8 +29,8 @@ from pathlib import Path
 
 import requests
 
-if len(sys.argv) < 4 or len(sys.argv) > 5:
-    print("Usage: {} <qt-version> <host> <target> [<arch>]\n".format(sys.argv[0]))
+if len(sys.argv) != 6:
+    print("Usage: {} <qt-version> <host> <target> <arch> <package_name>\n".format(sys.argv[0]))
     print("qt-version:   Qt version in the format of \"5.X.Y\"")
     print("host systems: linux, mac, windows")
     print("targets:      desktop, android, ios")
@@ -55,7 +55,7 @@ target = sys.argv[3]
 #                  "win32_msvc2015", "win32_mingw53"
 # */android:       "android_x86", "android_armv7"
 arch = ""
-if len(sys.argv) == 5:
+if len(sys.argv) >= 5:
     arch = sys.argv[4]
 elif os_name == "linux" and target == "desktop":
     arch = "gcc_64"
@@ -67,6 +67,10 @@ elif os_name == "mac" and target == "ios":
 if arch == "":
     print("Please supply a target architecture.")
     exit(1)
+
+package_name=sys.argv[5]
+package_name_tmpl1="qt.qt5.{}.{}.{}"
+package_name_tmpl2="qt.{}.{}.{}"
 
 # Build repo URL
 packages_url = base_url
@@ -88,15 +92,20 @@ archives = []
 archives_url = ""
 for packageupdate in update_xml.findall("PackageUpdate"):
     name = packageupdate.find("Name").text
-    if name == "qt.qt5.{}.{}".format(qt_ver_num, arch) or name == "qt.{}.{}".format(qt_ver_num, arch):
+    if name == package_name_tmpl1.format(qt_ver_num, package_name, arch) or name == package_name_tmpl2.format(qt_ver_num, package_name, arch):
         full_version = packageupdate.find("Version").text
         archives = packageupdate.find("DownloadableArchives").text.split(", ")
         package_desc = packageupdate.find("Description").text
         if ".qt5." in name:
-            archives_url = packages_url + "qt.qt5.{}.{}/".format(qt_ver_num, arch)
+            archives_url = packages_url + package_name_tmpl1.format(qt_ver_num, package_name, arch) + "/"
+            break
         else:
-            archives_url = packages_url + "qt.{}.{}/".format(qt_ver_num, arch)
-        break
+            archives_url = packages_url + package_name_tmpl2.format(qt_ver_num, package_name, arch) + "/"
+            break
+
+if archives_url == "":
+    print("not package found")
+    exit(1)
 
 if not full_version or not archives:
     print("Error while parsing package information!")
@@ -139,7 +148,7 @@ def download_extract_archive(archives_url, full_version, archive, tmp_directory_
     os.remove(local_archive_path)
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count()) as executor:
     jobs = [
         executor.submit(download_extract_archive, archives_url, full_version, archive, tmp_directory_path,
                         out_directory_path)
